@@ -63,7 +63,6 @@ class OffCanvas3D extends Component {
 
     const staggeredAnimatedMenus = this.state.stagArr.map((index) => {
       return (
-        <TouchableWithoutFeedback key={index} onPress={this._handlePress.bind(this, index)} style={{backgroundColor: 'red'}}>
           <Animated.View
           style={{ transform: [{ translateX: this.state.animatedStagArr[index] }] }}>
             <View style={styles.menuItemContainer}>
@@ -73,7 +72,6 @@ class OffCanvas3D extends Component {
               </Text>
             </View>
           </Animated.View>
-        </TouchableWithoutFeedback>
       )
     })
 
@@ -142,8 +140,8 @@ class OffCanvas3D extends Component {
 
   // animate stuffs with hard coded values for fine tuning
   _animateStuffs() {
-    const activityLeftPos = this.props.active ? 150 : 0
-    const scaleSize = this.props.active ? .8 : 1
+    const activityLeftPos = this.props.active ? 180 : 0
+    const scaleSize = this.props.active ? .5 : 1
     const rotate = this.props.active ? 1 : 0
     const menuTranslateX = this.props.active? 0 : -150
 
