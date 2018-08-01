@@ -96,7 +96,7 @@ class OffCanvas3D extends Component {
         </ScrollView>
 
         <Animated.View
-        onStartShouldSetResponder={() => true}
+        onStartShouldSetResponder={() => this.props.active}
         onResponderTerminationRequest={() => true}
         onResponderRelease={(evt) => this._gestureControl(evt)}
         style={[styles.activityContainer, {
